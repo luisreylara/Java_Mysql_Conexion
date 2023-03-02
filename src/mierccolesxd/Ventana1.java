@@ -47,7 +47,6 @@ public class Ventana1 extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        tfnombre = new javax.swing.JTextField();
         btnagregar = new javax.swing.JButton();
 
         tfid.setEditable(false);
@@ -121,8 +120,6 @@ public class Ventana1 extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Bradley Hand ITC", 1, 24)); // NOI18N
         jLabel1.setText("rfid");
 
-        tfnombre.setFont(new java.awt.Font("Bradley Hand ITC", 1, 18)); // NOI18N
-
         btnagregar.setBackground(new java.awt.Color(204, 255, 0));
         btnagregar.setFont(new java.awt.Font("Bradley Hand ITC", 3, 24)); // NOI18N
         btnagregar.setText("Agregar");
@@ -139,9 +136,7 @@ public class Ventana1 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(tfnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(335, 335, 335)
                 .addComponent(btnagregar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
@@ -157,9 +152,7 @@ public class Ventana1 extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(56, 56, 56)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(tfnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel1)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
@@ -222,7 +215,7 @@ public class Ventana1 extends javax.swing.JFrame {
            
             String query="";
             query="insert into bitacora (rfid) values (";
-            query = query+"'"+tfnombre.getText().toString()+"'";
+         //   query = query+"'"+tfnombre.getText().toString()+"'";
             
             query = query+")";
            
@@ -262,7 +255,7 @@ public class Ventana1 extends javax.swing.JFrame {
            
            
             String query="";
-            query="UPDATE contactos set nombre='" +tfnombre.getText().toString() +"',edad='" +tfedad.getText().toString() + "' WHERE id=" +tfid.getText().toString();
+       //     query="UPDATE contactos set nombre='" +tfnombre.getText().toString() +"',edad='" +tfedad.getText().toString() + "' WHERE id=" +tfid.getText().toString();
            
             System.out.println(query);
 
@@ -287,7 +280,7 @@ public class Ventana1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int row=jTable1.getSelectedRow();
         tfid.setText(jTable1.getValueAt(row, 0).toString());
-        tfnombre.setText(jTable1.getValueAt(row, 1).toString());
+     //   tfnombre.setText(jTable1.getValueAt(row, 1).toString());
         tfedad.setText(jTable1.getValueAt(row, 2).toString()); 
     }//GEN-LAST:event_jTable1MouseClicked
 
@@ -343,6 +336,5 @@ public class Ventana1 extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField tfedad;
     private javax.swing.JTextField tfid;
-    private javax.swing.JTextField tfnombre;
     // End of variables declaration//GEN-END:variables
 }
